@@ -26,7 +26,7 @@ var button=document.querySelector("#change");
 
   $.ajax({
     method:'get',
-    url:"http://api.openweathermap.org/data/2.5/forecast/daily?q="+city1 +"&mode=json&units=metric&cnt=4&APPID=a7e54fd0cdfb45c2645bb091f7ca1f5a",
+    url:"https://api.openweathermap.org/data/2.5/forecast/daily?q="+city1 +"&mode=json&units=metric&cnt=4&APPID=a7e54fd0cdfb45c2645bb091f7ca1f5a",
     dataTypes:'json',
     success:function(data){
       console.log(data);
