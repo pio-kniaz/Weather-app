@@ -8,22 +8,26 @@ font-family: 'Roboto Condensed', sans-serif;
 
 }
 .container{
-  margin: 10% auto;
+  margin: 3% auto;
   width: 100%;
   height: 100%;
 }
-.img-wrap{
-  margin-bottom: 10%;
+
+/*.wi{
   font-size: 150px;
+}*/
+#topwrap{
+  margin: 0 auto;
+  min-width: 300px;
+  max-width: 500px;
+  border-radius: 5%;
+  background-color: #f1f8f9;
 }
 
-.top-wrap{
-  margin: auto;
-  min-width: 300px;
-  width: 400px;
-    border-radius: 5%;
+.img-wrap{
+  font-size: 150px;
+  padding-top: 10%;
 
-  background-color: #f1f8f9;
 }
 .main-info{
   display: flex;
@@ -31,7 +35,7 @@ font-family: 'Roboto Condensed', sans-serif;
 }
 .left{
   width: 35%;
-  font-size: 3rem;
+  font-size: 2.7rem;
   align-self: flex-end;
   opacity: 0.6;
   padding-bottom: 5%;
@@ -48,6 +52,7 @@ font-family: 'Roboto Condensed', sans-serif;
   font-size: 30px;
   font-weight:200;
   letter-spacing: 3px;
+  text-transform: capitalize;
 
 }
 .center span{
@@ -62,8 +67,8 @@ font-family: 'Roboto Condensed', sans-serif;
   font-weight: bold;
   padding-bottom: 5%;
   padding-top: 5%;
-  width: 15%;
-  background-color: #54bae6;
+
+
   align-self: center;
 }
 .right span{
@@ -71,7 +76,7 @@ font-family: 'Roboto Condensed', sans-serif;
 }
 .extra-info{
   height: 150px;
-
+  flex-wrap: wrap;
   background-color: #2e3335;
   color: white;
   display: flex;
@@ -89,8 +94,21 @@ font-family: 'Roboto Condensed', sans-serif;
 .typeOfWeatehr{
   width: 33%;
 }
-.icona{
-  font-size: 15px;
-  margin-top: 20%;
-  margin-bottom: 5%;
+.next-day-wrap{
+  width: 100%;
 }
+.hide{
+  display: none;
+}
+.blue{
+  background-color: #08c;
+}
+
+@media (max-width: 320px) {
+
+    body{
+      font-size: 10px;
+    }
+
+
+  }
