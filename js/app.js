@@ -16,6 +16,7 @@ var buton =$("#submit").on("click",function(event){
 
 
   $.ajax({
+    
     method:'get',
     url:"https://api.openweathermap.org/data/2.5/weather?q=" + city +"&units=metric&APPID=a7e54fd0cdfb45c2645bb091f7ca1f5a",
     dataTypes:'json',
