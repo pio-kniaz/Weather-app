@@ -30,13 +30,16 @@ font-family: 'Roboto Condensed', sans-serif;
 
 }
 .main-info{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-bottom: 5%;
 }
 .left{
   width: 35%;
   font-size: 2.7rem;
-  align-self: flex-end;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
   opacity: 0.6;
   padding-bottom: 5%;
   padding-top: 5%;
@@ -69,19 +72,29 @@ font-family: 'Roboto Condensed', sans-serif;
   padding-top: 5%;
 
 
-  align-self: center;
+  -ms-flex-item-align: center;
+
+
+      align-self: center;
 }
 .right span{
   display: block;
 }
 .extra-info{
   height: 150px;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   background-color: #2e3335;
   color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-bottom-right-radius: 5%;
   border-bottom-left-radius: 5%;
 }
