@@ -122,6 +122,12 @@ font-family: 'Roboto Condensed', sans-serif;
     body{
       font-size: 10px;
     }
+    #topwrap{
+      max-width: 280px;
+      border-radius: 5%;
+      background-color: #f1f8f9;
+
+    }
 
 
   }
