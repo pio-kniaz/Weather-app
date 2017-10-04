@@ -73,7 +73,7 @@ $(document).ready(function() {
     $('#wind-api').html('<span> <i class="fa fa-flag" aria-hidden="true"></i> </span>' + data.wind.speed + 'km/h');
     $('#humidity-api').html('<span> <i class="fa fa-tint" aria-hidden="true"></i> </span>' + data.main.humidity + '%');
     $('#cloudiness').html('<span> <i class="wi wi-cloud icona"></i> </span>' + data.clouds.all + '%');
-    $('.right').html(`<span> ${date} </span> <span> ${dateDay} </span>`);
+    $('.right').html('<span>'+date+'</span>'+'<span>'+dateDay+ '</span>');
 
   }
 
