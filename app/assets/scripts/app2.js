@@ -1,6 +1,5 @@
 var a=1;
 $("#current-weather").on("click",function(){
-  console.log("dupa");
   $("#next-day-weather").addClass("hiden");
   $("#topwrap").slideDown();
 })
@@ -29,12 +28,8 @@ var button=document.querySelector("#change");
     url:"https://api.openweathermap.org/data/2.5/forecast/daily?q="+city1 +"&mode=json&units=metric&cnt=4&APPID=a7e54fd0cdfb45c2645bb091f7ca1f5a",
     dataTypes:'json',
     success:function(data){
-      console.log(data);
+      // console.log(data);
 
-
-
-      console.log(data.list[0].weather[0].main);
-      console.log(data.list[1].weather[0].main);
       day1(data);
       day2(data);
       day3(data);
@@ -60,27 +55,34 @@ var button=document.querySelector("#change");
 
     switch (data.list[1].weather[0].main) {
       case 'Clouds':
-      // console.log("chumru");
+
         $(".img-first-day").html('<i class="wi wi-day-cloudy icona"></i>');
         break;
         case 'Rain':
-        // console.log("descz");
+
         $(".img-first-day").html('<i class="wi wi-day-rain icona"></i>');
         break;
           case 'Clear':
-          // console.log("slonczeko");
+
           $(".img-first-day").html('<i class="wi wi-day-sunny icona"></i>');
-          console.log("czyste niebo");
         break;
           case 'Mist':
-            $(".img-first-day").html('<i class="wi wi-fog icona"></i>')
+            $(".img-first-day").html('<i class="wi wi-fog icona"></i>');
         break;
         case 'Rain':
-        $(".img-first-day").html('<i class="wi wi-rain icona"></i>')
+        $(".img-first-day").html('<i class="wi wi-rain icona"></i>');
           break;
         case 'Thunderstorm':
-          $(".img-first-day").html('<i class="wi wi-thunderstorm icona"></i>')
+          $(".img-first-day").html('<i class="wi wi-thunderstorm icona"></i>');
           break;
+        case 'light snow':
+        $(".img-first-day").html('<i class="wi wi-day-snow icona"></i>');
+          break;
+        case 'Snow':
+        $(".img-first-day").html('<i class="wi wi-day-snow icona"></i>');
+          break;
+
+
       default:
     }
   }
@@ -95,17 +97,17 @@ var button=document.querySelector("#change");
     // $("#cloudiness").html('<span> <i class="wi wi-cloud icona"></i> </span>'+data.list[0].clouds+'%');
     switch (data.list[2].weather[0].main) {
       case 'Clouds':
-      // console.log("chumru");
+
         $(".img-second-dayy").html('<i class="wi wi-day-cloudy icona"></i>');
         break;
         case 'Rain':
-        // console.log("descz");
+
         $(".img-second-day").html('<i class="wi wi-day-rain icona"></i>');
         break;
           case 'Clear':
-          // console.log("slonczeko");
+
           $(".img-second-day").html('<i class="wi wi-day-sunny icona"></i>');
-          console.log("czyste niebo");
+
         break;
           case 'Mist':
             $(".img-second-day").html('<i class="wi wi-fog icona"></i>')
@@ -115,6 +117,12 @@ var button=document.querySelector("#change");
           break;
         case 'Thunderstorm':
           $(".img-second-day").html('<i class="wi wi-thunderstorm icona"></i>')
+          break;
+        case 'light snow':
+          $(".img-second-day").html('<i class="wi wi-day-snow icona"></i>');
+          break;
+        case 'Snow':
+          $(".img-second-day").html('<i class="wi wi-day-snow icona"></i>');
           break;
       default:
     }
@@ -131,17 +139,14 @@ var button=document.querySelector("#change");
     // $("#cloudiness").html('<span> <i class="wi wi-cloud icona"></i> </span>'+data.list[0].clouds+'%');
     switch (data.list[3].weather[0].main) {
       case 'Clouds':
-      // console.log("chumru");
+
         $(".img-third-dayy").html('<i class="wi wi-day-cloudy icona"></i>');
         break;
         case 'Rain':
-        // console.log("descz");
         $(".img-third-day").html('<i class="wi wi-day-rain icona"></i>');
         break;
           case 'Clear':
-          // console.log("slonczeko");
           $(".img-third-day").html('<i class="wi wi-day-sunny icona"></i>');
-          console.log("czyste niebo");
         break;
           case 'Mist':
             $(".img-third-day").html('<i class="wi wi-fog icona"></i>')
@@ -152,6 +157,13 @@ var button=document.querySelector("#change");
         case 'Thunderstorm':
           $(".img-third-day").html('<i class="wi wi-thunderstorm icona"></i>')
           break;
+
+        case 'light snow':
+          $(".img-third-day").html('<i class="wi wi-day-snow icona"></i>');
+          break;
+        case 'Snow':
+          $(".img-third-day").html('<i class="wi wi-day-snow icona"></i>');
+            break;
       default:
     }
   }

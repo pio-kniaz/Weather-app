@@ -21,7 +21,8 @@ $(document).ready(function() {
       url: "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=metric&APPID=a7e54fd0cdfb45c2645bb091f7ca1f5a",
       dataTypes: 'json',
       success: function(data) {
-        console.log(data);
+        // console.log(data)
+
         call(data);
         $("#topwrap").slideDown();
 
@@ -33,16 +34,23 @@ $(document).ready(function() {
 
 
         switch (data.weather[0].main) {
+          case 'light snow':
+            $(".img-wrap").html('<i class="wi wi-day-snow icona"></i>');
+            break;
+          case 'Snow':
+            $(".img-wrap").html('<i class="wi wi-day-snow icona"></i>');
+            break;
+
           case 'Clouds':
-            // console.log("chumru");
+
             $(".img-wrap").html('<i class="wi wi-day-cloudy icona"></i>');
             break;
           case 'Rain':
-            // console.log("descz");
+
             $(".img-wrap").html('<i class="wi wi-day-rain icona"></i>');
             break;
           case 'Clear':
-            // console.log("slonczeko");
+
             $(".img-wrap").html('<i class="wi wi-day-sunny icona"></i>');
             break;
           case 'Mist':
